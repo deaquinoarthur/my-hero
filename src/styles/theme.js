@@ -1,6 +1,65 @@
 export default {
   font: {
-    family:
-      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+    family: "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    size: {
+      heading1: '4.209rem',
+      heading2: '3.157rem',
+      heading3: '2.369rem',
+      heading4: '1.777rem',
+      heading5: '1.333rem',
+      bodyLarge: '1.333rem',
+      bodyRegular: '1rem',
+      bodySmall: '0.875rem',
+      button: '1rem',
+      textButton: '1rem',
+      buttonSmall: '0.875rem',
+      notes: '1rem',
+      copyright: '0.75rem',
+    }
+  },
+  color: {
+    primary1: '#FF8B59',
+    primary2: '#ED8153',
+    primary3: '#E07A4F',
+    primary4: '#A15838',
+    primary5: '#4A281A',
+    secondary1: '#6242ED',
+    secondary2: '#5C3FE0',
+    secondary3: '#5238C7',
+    secondary4: '#422DA1',
+    secondary5: '#1F154A',
+    tertiary1: '#FF5768',
+    tertiary2: '#ED5160',
+    tertiary3: '#E04C5B',
+    tertiary4: '#A13741',
+    tertiary5: '#4A191E',
+    neutral1: '#FFFFFF',
+    neutral2: '#f4F5F7',
+    neutral3: '#E1E1E1',
+    neutral4: '#737581',
+    neutral5: '#4A4B53',
+    neutral6: '#000000',
+    success1: '#529E66',
+    success2: '#367B48',
+    success3: '#276738',
+    warning1: '#E1C542',
+    warning2: '#CAB23F',
+    warning3: '#B49E35',
+    danger1: '#D0454C',
+    danger2: '#B54248',
+    danger3: '#95353A'
+  },
+  space: {
+    '8': '0.8rem',
+    '12': '1.2rem',
+    '16': '1.6rem',
+    '24': '2.4rem',
+    '32': '3.2rem',
+    '48': '4.8rem',
+    '64': '6.4rem',
+    '96': '9.6rem',
+    '128': '12.8rem',
+    '192': '19.2rem',
+    '256': '25.6rem'
   }
 }
