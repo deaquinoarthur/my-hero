@@ -53,11 +53,6 @@ module.exports = (plop) => {
         },
         {
           type: 'add',
-          path: '../src/pages/{{name}}/stories.jsx',
-          templateFile: 'templates/page/stories.jsx.hbs'
-        },
-        {
-          type: 'add',
           path: '../src/pages/{{name}}/test.jsx',
           templateFile: 'templates/page/test.jsx.hbs'
         }

@@ -28,27 +28,19 @@ const GlobalStyles = createGlobalStyle`
         url('/fonts/poppins-v12-latin-600.woff2') format('woff2');
   }
 
-  * {
+  *,
+  *::before,
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    &::before,
-    &::after {
-      box-sizing: inherit;
-    }
   }
 
   ${({ theme }) => css`
-    html {
-      font-size: 62.5%;
-    }
-
     body {
       font-family: ${theme.font.family};
-      font-size: 1.6rem;
     }
   `}
 `
