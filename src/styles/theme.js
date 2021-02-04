@@ -1,6 +1,7 @@
 export default {
   font: {
     family: "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    logo: "'Luckiest Guy', cursive",
     size: {
       heading1: '4.209rem',
       heading2: '3.157rem',

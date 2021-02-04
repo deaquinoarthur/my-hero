@@ -2,6 +2,19 @@ import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
+    font-family: 'Luckiest Guy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/luckiest-guy-v11-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('/fonts/luckiest-guy-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/luckiest-guy-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/luckiest-guy-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/luckiest-guy-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/luckiest-guy-v11-latin-regular.svg#LuckiestGuy') format('svg'); /* Legacy iOS */
+  }
+
+  @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
