@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react'
 
 import {{pascalCase name}} from '.'
 
-describe('<{{pascalCase name}} />', function() {
-  it('should render the component properly', function() {
+describe('<{{pascalCase name}} />', () => {
+  it('should render the component correctly', () => {
     const { container } = render(<{{pascalCase name}} />)
     expect(container).toBeInTheDocument()
   })
