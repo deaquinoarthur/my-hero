@@ -1,10 +1,8 @@
 import * as Style from './styles'
 
-function Button({ children, primary, secondary, ...props }) {
+function Button({ children, ...props }) {
   return (
     <Style.Button
-      primary={primary}
-      secondary={secondary}
       {...props}
     >
       {children}
