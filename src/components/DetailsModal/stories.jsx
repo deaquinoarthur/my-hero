@@ -12,7 +12,8 @@ export default {
   args: {
     comicDetails: {
       ...comicDetails
-    }
+    },
+    isShown: true,
   }
 }
 

@@ -9,11 +9,13 @@ export const DetailsModal = styled.div.attrs({
   right: 0;
   left: 0;
   bottom: 0;
+
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
+
   background-color: rgba(0, 0, 0, 0.8);
   overflow: auto;
   cursor: pointer;
@@ -30,14 +32,28 @@ export const DetailsModal = styled.div.attrs({
 export const Wrapper = styled.div.attrs({
   className: 'DetailsModal__Wrapper',
 })`
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 0.25rem;
+
   cursor: default;
 
+  svg {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+
+    width: 2.5rem;
+
+    cursor: pointer;
+  }
+
   ${({ theme }) => css`
-    padding: ${theme.space['16']};
+    padding: ${theme.space['32']};
+
     background-color: ${theme.color.neutral1};
 
     @media (min-width: 768px) {
@@ -55,7 +71,6 @@ export const Wrapper = styled.div.attrs({
         width: 280px;
       }
     }
-
   `}
 `
 
@@ -65,10 +80,12 @@ export const Info = styled.div.attrs({
   ${({ theme }) => css`
     h1 {
       margin-bottom: ${theme.space['8']};
+
       font-size: ${theme.font.size.heading5};
 
       @media (min-width: 768px) {
         margin-bottom: ${theme.space['24']};
+
         font-size: ${theme.font.size.heading4};
       }
     }
