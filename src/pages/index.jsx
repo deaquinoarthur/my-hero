@@ -1,18 +1,18 @@
-import Nav from '../components/Nav'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
-const Main = styled.main`
-  min-height: 100vh;
-
-  ${({ theme }) => theme && css`
-    background-image: linear-gradient(${theme.color.secondary5}, ${theme.color.secondary4});
-  `}
-`
+import Main from './style'
+import comicData from 'utils/tests/comicsDataMock'
+import Nav from 'components/Nav'
+import Search from 'components/Search'
+import Container from 'components/Container'
 
 export default function Home() {
   return (
     <Main>
       <Nav />
+      <Container>
+        <Search comicData={comicData} />
+      </Container>
     </Main>
   )
 }
