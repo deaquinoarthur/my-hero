@@ -8,6 +8,7 @@ export default {
       heading3: '2.369rem',
       heading4: '1.777rem',
       heading5: '1.333rem',
+      heading6: '1rem',
       bodyLarge: '1.333rem',
       bodyRegular: '1rem',
       bodySmall: '0.875rem',
