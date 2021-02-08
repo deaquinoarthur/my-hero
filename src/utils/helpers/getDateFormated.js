@@ -1,4 +1,4 @@
-function getFormatedPublishedDate(date) {
+function getDateFormated(date) {
   const monthNames = [
     'January',
     'February',
@@ -32,4 +32,4 @@ function getFormatedPublishedDate(date) {
   return `${month} ${day}, ${year}`
 }
 
-export default getFormatedPublishedDate
+export default getDateFormated
