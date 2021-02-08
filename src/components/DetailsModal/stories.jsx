@@ -1,5 +1,5 @@
 import DetailsModal from '.'
-import comicDetails from 'utils/tests/comicDetailsDataMock'
+import comicDetails from 'utils/tests/comicDetailsMock'
 
 export default {
   title: 'DetailsModal',
@@ -13,8 +13,8 @@ export default {
     comicDetails: {
       ...comicDetails
     },
-    isShown: true,
+    isShown: true
   }
 }
 
-export function Default(args) { return <DetailsModal {...args} /> }
+export const Default = (args) => <DetailsModal {...args} />

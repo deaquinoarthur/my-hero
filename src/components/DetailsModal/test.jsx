@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react'
-import getFormatedPublishedDate from 'utils/helpers/getFormatedPublishedDate'
+import { screen } from '@testing-library/react'
+import getDateFormated from 'utils/helpers/getDateFormated'
 
-import comicDetails from 'utils/tests/comicDetailsDataMock'
+import comicDetails from 'utils/tests/comicDetailsMock'
 import { renderWithTheme } from 'utils/tests/helpers'
 import DetailsModal from '.'
 
@@ -28,24 +28,26 @@ describe('<DetailsModal />', () => {
   })
 
   it('should show comic title', () => {
-    const comicTitle = screen.getByRole('heading', { name: /Iceman \(1984\) #3/i })
+    const comicTitle = screen.getByRole('heading', {
+      name: /Iceman \(1984\) #3/i
+    })
     expect(comicTitle).toBeInTheDocument()
   })
 
   it('should show the published data', () => {
     const [publishedDate] = comicDetails.dates.filter(
-      date => date.type === 'onsaleDate'
+      (date) => date.type === 'onsaleDate'
     )
     const { date } = publishedDate
 
-    const publishedAt = screen.getByText(getFormatedPublishedDate(date))
+    const publishedAt = screen.getByText(getDateFormated(date))
     expect(publishedAt).toBeInTheDocument()
   })
 
   it('should show the creators role and name', () => {
     const creators = comicDetails.creators.items
 
-    creators.map(creator => {
+    creators.map((creator) => {
       const creatorRole = screen.getByText(creator.role)
       expect(creatorRole).toBeInTheDocument()
 
