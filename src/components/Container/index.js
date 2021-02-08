@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Container = styled.div.attrs({
-  className: 'Container',
+  className: 'Container'
 })`
   width: 100%;
   max-width: 87.5rem;
