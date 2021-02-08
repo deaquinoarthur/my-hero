@@ -1,79 +1,64 @@
-import { render, screen } from '@testing-library/react'
-import {renderWithTheme} from 'utils/tests/helpers'
+import { fireEvent, screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
+
+import comicList from 'utils/tests/comicListMock'
 
 import Search from '.'
 
-const comicData = [
-  {
-    title: 'Spider Man',
-    variantDescription: 'Anka Mighty Men Variant',
-    imgPath: 'http://i.annihil.us/u/prod/marvel/i/mg/b/a0/600f0ecde5b41.jpg',
-    imgAlt: 'Spider Man Issue'
-  },
-]
-
-describe('<Search />', function() {
-  it('should render the component correctly', function() {
-    const { container } = renderWithTheme(<Search comicData={[]} />)
+describe('<Search />', function () {
+  it('should render the component correctly', function () {
+    const { container } = renderWithTheme(<Search comicList={[]} />)
     expect(container).toBeInTheDocument()
   })
 
   it('should show at least one item of the list of comics', () => {
-    renderWithTheme(<Search comicData={comicData} />)
-
-    const comicDataLength = comicData.length
+    renderWithTheme(<Search comicList={comicList} />)
+    const comicDataLength = comicList.length
     expect(comicDataLength).toBeGreaterThanOrEqual(1)
   })
 
-  it('should show a feedback message when what was searched is not found', () => {
-    renderWithTheme(<Search comicData={[]} />)
-
-    const comicDataLength = [].length
-    expect(comicDataLength).toBeLessThanOrEqual(0)
-
-    const notFoundText = screen.getByText('We could not find what you were searching for')
-    expect(notFoundText).toBeInTheDocument()
-  })
-
   it('should show comic thumbnail', () => {
-    renderWithTheme(<Search comicData={comicData} />)
-
-    const img = screen.getByAltText('Spider Man Issue')
+    renderWithTheme(<Search comicList={comicList} />)
+    const img = screen.getByAltText('Iceman (2018) #5')
     expect(img).toBeInTheDocument()
   })
 
   it('should show "Comic Issue" text', () => {
-    renderWithTheme(<Search comicData={comicData} />)
-
-    const comicIssueText = screen.getByText('Comic Issue')
-    expect(comicIssueText).toBeInTheDocument()
+    renderWithTheme(<Search comicList={comicList} />)
+    const comicIssueText = screen.getAllByText('Comic Issue')
+    expect(comicIssueText[0]).toBeInTheDocument()
   })
 
   it('should show comic title', () => {
-    renderWithTheme(<Search comicData={comicData} />)
-
-    const comicTitle = screen.getByRole('heading', { name: /Spider Man/i })
+    renderWithTheme(<Search comicList={comicList} />)
+    const comicTitle = screen.getByRole('heading', {
+      name: /Iceman \(2018\) #5/i
+    })
     expect(comicTitle).toBeInTheDocument()
   })
 
   it('should show comic description', () => {
-    renderWithTheme(<Search comicData={comicData} />)
-
-    const comicDescription = screen.getByText('Anka Mighty Men Variant')
+    renderWithTheme(<Search comicList={comicList} />)
+    const comicDescription = screen.getByText(comicList[0].description)
     expect(comicDescription).toBeInTheDocument()
   })
 
   it('should render "View Details" button', () => {
-    renderWithTheme(<Search comicData={comicData} />)
-
-    const buttonViewDetail = screen.getByRole('button', { name: /View Details/i })
-    expect(buttonViewDetail).toBeInTheDocument()
+    renderWithTheme(<Search comicList={comicList} />)
+    const buttonViewDetail = screen.getAllByRole('button', {
+      name: /View Details/i
+    })
+    expect(buttonViewDetail[0]).toBeInTheDocument()
   })
 
-  it('should render "Select Issue" button', () => {
-    renderWithTheme(<Search comicData={comicData} />)
-
-    const buttonSelectIssue = screen.getByRole('button', { name: /Select Issue/i })
-    expect(buttonSelectIssue).toBeInTheDocument()
+  it('should render list of comics when the button "Search" is clicked', () => {
+    renderWithTheme(<Search comicList={comicList} />)
+    const handleSearchClick = jest.fn()
+    const button = screen.getByRole('button', { name: /Search/i })
+    fireEvent.click(button)
+    handleSearchClick()
+    expect(handleSearchClick).toHaveBeenCalledTimes(1)
+    const comicListLength = comicList.length
+    expect(comicListLength).toBeGreaterThanOrEqual(1)
   })
 })
