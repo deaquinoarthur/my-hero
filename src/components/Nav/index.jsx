@@ -6,12 +6,10 @@ function Nav() {
     <Style.Nav>
       <Link href="/">
         <a>
-          <h1 data-testid="logo">
-            <span>WHERE IS</span>
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span>MY HERO?</span>
-          </h1>
+          <img
+            src="/img/where-is-my-hero-logo.svg"
+            alt="Where Is My Hero Logo"
+          />
         </a>
       </Link>
     </Style.Nav>

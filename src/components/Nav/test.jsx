@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 
 import { renderWithTheme } from 'utils/tests/helpers'
 import Nav from '.'
@@ -11,7 +11,7 @@ describe('<Nav />', () => {
 
   it('should show the logo in the navbar', function () {
     renderWithTheme(<Nav />)
-    const logo = screen.getByTestId('logo')
+    const logo = screen.getByAltText('Where Is My Hero Logo')
     expect(logo).toBeInTheDocument()
   })
 })
