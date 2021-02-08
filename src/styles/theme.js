@@ -1,6 +1,7 @@
 export default {
   font: {
-    family: "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    family:
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     logo: "'Luckiest Guy', cursive",
     size: {
       heading1: '4.209rem',
@@ -16,7 +17,7 @@ export default {
       textButton: '1rem',
       buttonSmall: '0.875rem',
       notes: '1rem',
-      copyright: '0.75rem',
+      copyright: '0.75rem'
     }
   },
   color: {
@@ -52,16 +53,16 @@ export default {
     danger3: '#95353A'
   },
   space: {
-    '8': '0.8rem',
-    '12': '1.2rem',
-    '16': '1.6rem',
-    '24': '2.4rem',
-    '32': '3.2rem',
-    '48': '4.8rem',
-    '64': '6.4rem',
-    '96': '9.6rem',
-    '128': '12.8rem',
-    '192': '19.2rem',
-    '256': '25.6rem'
+    8: '0.8rem',
+    12: '1.2rem',
+    16: '1.6rem',
+    24: '2.4rem',
+    32: '3.2rem',
+    48: '4.8rem',
+    64: '6.4rem',
+    96: '9.6rem',
+    128: '12.8rem',
+    192: '19.2rem',
+    256: '25.6rem'
   }
 }
