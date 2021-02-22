@@ -1,11 +1,6 @@
+![Where Is My Hero](where-is-my-hero.png)
 
-![React Avançado](https://raw.githubusercontent.com/React-Avancado/boilerplate/master/public/img/logo-gh.svg)
-
-This is a [Next.js](https://nextjs.org/) boilerplate to be used in a course called [React Avançado](https://reactavancado.com.br/).
-![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
-## What is inside?
-
-This project uses lot of stuff as:
+## Technologies:
 
 - [NextJS](https://nextjs.org/)
 - [Styled Components](https://styled-components.com/)
@@ -16,9 +11,7 @@ This project uses lot of stuff as:
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
 
-## Getting Started
-
-First, run the development server:
+## Running the project:
 
 ```bash
 npm run dev
@@ -26,11 +19,11 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Commands
+## Commands:
 
 - `dev`: runs your application on `localhost:3000`
 - `build`: creates the production build version
@@ -41,17 +34,14 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 - `storybook`: runs storybook on `localhost:6006`
 - `build-storybook`: create the build version of storybook
 
-## Learn More
+## Learn More:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js Documentation - Learn about Next.js features and API.](https://nextjs.org/docs)
+- [Learn Next.js - An interactive Next.js tutorial.](https://nextjs.org/learn)
+- [Storybook - Organize and test your components](https://storybook.js.org/)
+- [Plop JS - Generate Components Automatically](https://plopjs.com/)
+- [Jest - How to test your components](https://jestjs.io/)
+- [Styled Components - A great way to style React components](https://styled-components.com/)
+- [Eslint - Keep your code consistent](https://eslint.org/)
+- [Prettier - Make your code clean and beautiful](https://prettier.io/)
+- [Husky - Hooks to be used before git operations](https://github.com/typicode/husky)
